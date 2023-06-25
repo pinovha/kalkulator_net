@@ -1,0 +1,111 @@
+﻿<Window x:Class="NET_PR2_1_z4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NET_PR2_1_z4"
+        mc:Ignorable="d"
+        
+        Title="Kalkulator"
+        Height="560"
+        Width="365"
+        FontSize="26"
+        >
+    <StackPanel>
+        <TextBlock
+            FontSize="16"
+            TextAlignment="Right"
+            Margin="0,0,5,0"
+            Text="{Binding Path=Działanie}"
+            />
+        <TextBlock
+            TextAlignment="Right"
+            Margin="0,0,5,0"
+            Text="{Binding Path=Wynik}" Height="46" Width="334"
+            />
+        <StackPanel
+            Style="{DynamicResource Wiersz}"
+            >
+            <Button Background="AliceBlue">%</Button>
+            <Button Click="CzyszczenieWprowadzenia">CE</Button>
+            <Button Click="Czyszczenie">C</Button>
+            <Button Click="KasowanieZnaku">⌫</Button>
+        </StackPanel>
+        
+        <StackPanel
+            Style="{DynamicResource Wiersz}"
+            >
+            <Button Click="DziałanieJednoargumentowe">1/x</Button>
+            <Button Click="DziałanieDwuargumentowe">mod</Button>
+            <Button Click="DziałanieDwuargumentowe">^</Button>
+            <Button Click="DziałanieJednoargumentowe">x^2</Button>
+            <Button Click="DziałanieDwuargumentowe">/</Button>
+        </StackPanel>
+        <StackPanel
+            Style="{DynamicResource Wiersz}"
+            >
+            <Button
+                Style="{DynamicResource Cyfra}"
+                Click="Cyfra"
+                >7</Button>
+            <Button
+                Style="{DynamicResource Cyfra}"
+                Click="Cyfra"
+                >8</Button>
+            <Button
+                Style="{DynamicResource Cyfra}"
+                Click="Cyfra"
+                >9</Button>
+            <Button Click="DziałanieDwuargumentowe">*</Button>
+            <Button Click="DziałanieJednoargumentowe">n!</Button>
+        </StackPanel>
+        <StackPanel
+            Style="{DynamicResource Wiersz}"
+            >
+            <Button
+                Style="{DynamicResource Cyfra}"
+                Click="Cyfra"
+                >4</Button>
+            <Button
+                Style="{DynamicResource Cyfra}"
+                Click="Cyfra"
+                >5</Button>
+            <Button
+                Style="{DynamicResource Cyfra}"
+                Click="Cyfra"
+                >6</Button>
+            <Button Click="DziałanieDwuargumentowe">-</Button>
+            <Button Click="DziałanieJednoargumentowe">log</Button>
+        </StackPanel>
+        <StackPanel
+            Style="{DynamicResource Wiersz}"
+            >
+            <Button
+                Style="{DynamicResource Cyfra}"
+                Click="Cyfra"
+                >1</Button>
+            <Button
+                Style="{DynamicResource Cyfra}"
+                Click="Cyfra"
+                >2</Button>
+            <Button
+                Style="{DynamicResource Cyfra}"
+                Click="Cyfra"
+                >3</Button>
+            <Button Click="DziałanieDwuargumentowe">+</Button>
+            <Button Click="DziałanieJednoargumentowe" FontSize="22">up</Button>
+        </StackPanel>
+        <StackPanel
+            Style="{DynamicResource Wiersz}"
+            >
+            <Button Style="{DynamicResource Cyfra}" Click="ZmianaZnaku">+/-</Button>
+            <Button
+                Style="{DynamicResource Cyfra}"
+                Click="Cyfra"
+                >0</Button>
+            <Button Style="{DynamicResource Cyfra}" Click="Przecinek">,</Button>
+            <Button Background="AliceBlue" Click="RównaSię">=</Button>
+            <Button Click="DziałanieJednoargumentowe"  FontSize="22">down</Button>
+        </StackPanel>
+    </StackPanel>
+</Window>
